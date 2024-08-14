@@ -16,9 +16,10 @@ const AccountPage: React.FC = () => {
         const response = await axios.get(`${API_BASE_URL}/me`, {
           headers: { Authorization: `Bearer ${accessToken}` }
         });
+        console.log(response.data);
         setUserData(response.data);
       } catch (error) {
-        console.error(error);
+        setError(`Something went wrong ${error}`);
         await refreshAccessToken();
       }
     };

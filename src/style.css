@@ -99,3 +99,7 @@ p {
   font-size: 32px;
   text-align: center;
 }
+
+.error {
+  color: rgb(252, 0, 0);
+}
